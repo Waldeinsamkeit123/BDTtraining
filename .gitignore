@@ -1,34 +1,7 @@
-# Python
 __pycache__/
 *.py[cod]
-*.egg-info/
 .pytest_cache/
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Logs
-*.log
-
-# Training outputs / large files
-outputs/
-checkpoints/
-runs/
-wandb/
-*.root
-*.h5
-*.hdf5
-*.npz
-*.npy
-*.pt
-*.pth
-*.onnx
-
-# OS / editor
-.DS_Store
-.vscode/
+.mypy_cache/
+*-sync/
+outputs/**
+!outputs/.gitkeep

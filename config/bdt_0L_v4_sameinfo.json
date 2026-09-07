@@ -1,0 +1,90 @@
+{
+  "name": "0L_v4_sameinfo",
+  "channel": "0L",
+  "data_dir": "/scratchfs2/cms/wanghan/MLtraining/TrainingData/2024/0L_NewWP_merged",
+  "output_dir": "outputs/0L_v4_sameinfo",
+  "part_yaml": "/scratchfs2/cms/wanghan/MLtraining/NanoTTH-ForTrain-/train/data/ttH_0L_ParT_2024_boosted_v4.yaml",
+  "tree": "Events",
+  "selection": "(nCleanedJet>=4) & (sum(CleanedJet_tag>=50)>=1) & (sum(CleanedJet_tag>=40)>=2) & (HT>=250) & (nTargetFatJet>=1)",
+  "classes": [
+    {"name": "ttHZ", "members": ["ttHcc", "ttHbb", "ttZqq", "ttZcc", "ttZbb"], "class_weight": 1.0},
+    {"name": "ttjets", "members": ["ttLF", "ttcj", "ttcc", "tt2c", "ttbj", "ttbb", "tt2b"], "class_weight": 1.0},
+    {"name": "qcd", "members": ["qcdraw", "wcq", "wqq", "zbb", "zcc", "zqq"], "class_weight": 0.5}
+  ],
+  "samples": [
+    {"name": "TTHTo2C", "file": "TTH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTHTo2C_TTTo2L2Nu", "file": "ttH-Hto2C_M-125_TTTo2L2Nu_TuneCP5_13p6TeV-powheg-pythia8_merged.root"},
+    {"name": "TTHTo2C_TTToHadronic", "file": "ttH-Hto2C_M-125_TTToHadronic_TuneCP5_13p6TeV-powheg-pythia_merged.root"},
+    {"name": "TTHTo2C_TTToSemiLep", "file": "ttH-Hto2C_M-125_TTToSemiLep_TuneCP5_13p6TeV-powheg-pythia8_merged.root"},
+    {"name": "TTHTo2B", "file": "TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTHTo2B_TTToHadronic", "file": "TTH-Hto2B-TTto4Q_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTHTo2B_TTToSemiLep", "file": "TTH-Hto2B-TTtoLNu2Q_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTHTo2B_TTTo2L2Nu", "file": "TTH-Hto2B-TTto2L2Nu_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTHTo2B_HToNonBB", "file": "TTH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTZToQQ", "file": "TTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8_merged.root"},
+    {"name": "TTZToQQ_TTTo2L2Nu", "file": "ttZ-Zto2Q_M-125_TTTo2L2Nu_TuneCP5_13p6TeV-powheg-pythia8_merged.root"},
+    {"name": "TTZToQQ_TTToHadronic", "file": "ttZ-Zto2Q_M-125_TTToHadronic_TuneCP5_13p6TeV-powheg-pythia8_merged.root"},
+    {"name": "TTZToQQ_TTToSemiLep", "file": "ttZ-Zto2Q_M-125_TTToSemiLep_TuneCP5_13p6TeV-powheg-pythia8_merged.root"},
+    {"name": "TTToHadronic", "file": "TTto4Q_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTToSemiLeptonic", "file": "TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "TTTo2L2Nu", "file": "TTto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8_merged.root"},
+    {"name": "QCD_HT40to70", "file": "QCD-4Jets_Bin-HT-40to70_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT70to100", "file": "QCD-4Jets_Bin-HT-70to100_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT100to200", "file": "QCD-4Jets_Bin-HT-100to200_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT200to400", "file": "QCD-4Jets_Bin-HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT400to600", "file": "QCD-4Jets_Bin-HT-400to600_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT600to800", "file": "QCD-4Jets_Bin-HT-600to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT800to1000", "file": "QCD-4Jets_Bin-HT-800to1000_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT1000to1200", "file": "QCD-4Jets_Bin-HT-1000to1200_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT1200to1500", "file": "QCD-4Jets_Bin-HT-1200to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT1500to2000", "file": "QCD-4Jets_Bin-HT-1500to2000_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "QCD_HT2000toInf", "file": "QCD-4Jets_Bin-HT-2000_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "WJetsToQQ_HT100to400", "file": "Wto2Q-3Jets_Bin-HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "WJetsToQQ_HT400to800", "file": "Wto2Q-3Jets_Bin-HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "WJetsToQQ_HT800to1500", "file": "Wto2Q-3Jets_Bin-HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "WJetsToQQ_HT1500to2500", "file": "Wto2Q-3Jets_Bin-HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "WJetsToQQ_HT2500toInf", "file": "Wto2Q-3Jets_Bin-HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "ZJetsToQQ_HT100to400", "file": "Zto2Q-4Jets_Bin-HT-100to400_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "ZJetsToQQ_HT400to800", "file": "Zto2Q-4Jets_Bin-HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "ZJetsToQQ_HT800to1500", "file": "Zto2Q-4Jets_Bin-HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "ZJetsToQQ_HT1500to2500", "file": "Zto2Q-4Jets_Bin-HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"},
+    {"name": "ZJetsToQQ_HT2500toInf", "file": "Zto2Q-4Jets_Bin-HT-2500_TuneCP5_13p6TeV_madgraphMLM-pythia8_merged.root"}
+  ],
+  "features": {
+    "max_cleaned_jets": 8,
+    "max_target_fatjets": 3,
+    "include_absolute_phi": true,
+    "include_derived_ak4_tag_summaries": false
+  },
+  "folds": {
+    "count": 5,
+    "held_out": "event % 5 == fold",
+    "pool": "event % 5 != fold",
+    "secondary_validation": "stable_hash(run,luminosityBlock,event,sample_id) % 10 == 0"
+  },
+  "reweighting": {
+    "base_weight": "abs(weight)",
+    "method": "flat",
+    "variables": {"MET_pt": [-1e99, 1e99], "MET_phi": [-1e99, 1e99]},
+    "class_weights": [1.0, 1.0, 0.5],
+    "implementation": "deterministic one-bin importance weights"
+  },
+  "xgboost": {
+    "params": {
+      "objective": "multi:softprob",
+      "num_class": 3,
+      "eval_metric": "mlogloss",
+      "tree_method": "hist",
+      "eta": 0.05,
+      "max_depth": 4,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 1.0,
+      "seed": 20260814,
+      "nthread": 4
+    },
+    "num_boost_round": 600,
+    "early_stopping_rounds": 30
+  }
+}
+
